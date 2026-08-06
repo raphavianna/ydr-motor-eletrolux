@@ -1,0 +1,33 @@
+# Credenciais e segredos — nunca versionados (briefing §5.4)
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials*.json
+
+# Node / painel
+node_modules/
+dist/
+.cache/
+npm-debug.log*
+yarn-error.log*
+
+# Python (scripts de ingestão / geração da view latest)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Artefatos temporários
+*.tmp
+*.log
+tmp/
