@@ -20,10 +20,35 @@ Complemento ao documento-mãe (`briefing-tecnico-piloto-eletrolux.md`). Registra
 - **AI** = medição: onde a marca está na resposta de IA (share of answer, visibilidade por categoria, menções vs. concorrente).
 - **GEO** = ação (Generative Engine Optimization): onde e como ganhar a resposta — os gaps viram pauta de conteúdo AI-native gerado no painel.
 
+**Referência de interface:** o gerador de conteúdo do Semrush (tipo ContentShake / SEO Content — parâmetros estruturados, score "Ready to rank", Title Tag e Meta Description). O painel replica essa tela **internamente**, com Semrush no backend, mas **alimentada pelo drill-down do motor** — não é o usuário digitando um tema do zero, é o motor apontando o quê criar.
+
+### Fluxo: da leitura de IA à criação de conteúdo (drill-down)
+
+1. **Leitura AI** — share of answer + visibilidade por categoria mostram onde a marca tem espaço de crescimento (ex.: *Máquinas de Lavar e Secar*, visibilidade 49; no tópico, Midea lidera 79 vs. Electrolux 48).
+2. **Drill-down GEO** — ao clicar na categoria/gap, o painel abre os **tópicos específicos** que devem receber conteúdo (de gap_topics/brand_topics cruzado com a base de termos daquele tópico), rankeados por volume × gap de visibilidade.
+3. **Seleção de tópicos** — o usuário marca os tópicos-pauta.
+4. **Brief automático** — o painel monta o brief espelhando a nossa estrutura (território, idioma local, keywords validadas do tópico, categoria/lente/funil).
+5. **Geração AI-native** — Semrush no back gera o conteúdo com título, meta description e score de prontidão para ser citado/rankeado.
+6. **Fechamento de ciclo** — conteúdo publicado = ação tomada → resultado medido → realimenta a leitura de share of answer (ciclo §2.1). A próxima leitura mostra se a visibilidade subiu.
+
+### De-para: parâmetros do gerador ↔ nossa estrutura
+
+| Parâmetro (gerador Semrush) | Nossa estrutura |
+|---|---|
+| Location | território (BR / MX / AR / CO) |
+| Language | idioma local (§5.5) — pt-BR, es-MX… |
+| Keywords | termos validados do tópico (base madura, com volume real) |
+| Title / Topic | tópico/gap selecionado no drill-down |
+| Content type | derivado da lente/funil (guia→descoberta, comparativo→consideração, "não liga"→atendimento) |
+| Tone / Readability | filtro editorial da marca |
+| SEO-booster / "Ready to rank" | critério de prontidão AI-FIT/GEO |
+
 **Pendências desta feature (para a etapa de execução):**
 - Modelo de disparo: da ação endereçada pelo motor para o rascunho de conteúdo.
 - Grau de automação da interface (quase automático — definir os pontos de revisão humana).
 - Formato de saída do conteúdo por tipo de motor de resposta.
+- Regra de ranqueamento dos tópicos no drill-down (peso de volume vs. gap de visibilidade).
+- API do gerador Semrush no backend vs. modelo manual, alinhado ao §5.4.
 
 ---
 
