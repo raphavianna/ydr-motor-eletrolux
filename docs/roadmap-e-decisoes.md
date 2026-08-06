@@ -52,6 +52,32 @@ Complemento ao documento-mãe (`briefing-tecnico-piloto-eletrolux.md`). Registra
 
 ---
 
+## Feature ancorada — Aba LatAm (visão regional comparativa)
+
+**Status:** ancorada; ativa quando ≥2 países tiverem base madura (BR pronto; liga ao fechar MX). Execução em etapa posterior.
+
+**O que é:** uma aba no **topo** da navegação — a visão regional que vem *antes* das visões por país. Consolida os dados de todas as regiões (BR, MX, depois AR, CO) e permite **comparar volume/demanda, posição das marcas e tendências entre países**, extraindo insight e tendência cross-mercado.
+
+**Hierarquia de navegação (coerente com §2.2, do mais amplo ao mais específico) e com o drill-down já prototipado no módulo de IA:**
+
+`LatAm (região) → País → Categoria → Tópico → Keyword`
+
+**Princípio de junção (importante, respeita §5.5):** a comparação entre países acontece na camada de **dimensões comparáveis** — categoria de produto, marca, etapa de funil, fonte, share of answer/AI — e **não** no nível de termo/keyword (que é local e não se traduz: "estufa" ≠ "fogão", "minisplit" ≠ "ar-condicionado"). Cada país mantém a sua lista de termos; o cruzamento é sempre por **categoria × marca × métrica**.
+
+**O que a aba entrega:**
+- **Demanda por categoria × país** — onde cada categoria é maior (ex.: minisplit domina MX; ar-condicionado no BR).
+- **Posição/share de marca × país** (Electrolux vs. concorrentes) nas três leituras: busca (Semrush), tráfego/share (Similarweb), share of answer (IA).
+- **Tendências e movimentos cross-país** — ex.: Midea subindo em climatização em BR e MX ao mesmo tempo.
+- **Força/fraqueza por país e por categoria** — o mapa de onde priorizar por mercado.
+
+**Depende de:** base madura por país + AI tracking por país + Similarweb por país.
+
+**Pendências desta feature:**
+- Normalização para comparar volumes entre países (a base de busca difere por mercado) — comparar por share/índice, não por volume absoluto cru.
+- Definição das visões (matriz categoria × país, rankings de marca por país, mapa de calor, séries de tendência).
+
+---
+
 ## Módulo AI/GEO — ativo no piloto
 
 Decisão: o módulo de share of answer / IA entra **ativo** no piloto (antes era etapa posterior no briefing). Motivo: o próprio export de Semrush (e Similarweb, canal Gen AI) já traz a camada de performance de IA, sem custo de fonte nova. A camada de IA é **atributo do termo/tópico**, não uma fonte separada.
