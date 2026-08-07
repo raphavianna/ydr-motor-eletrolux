@@ -206,7 +206,6 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 .fw-eras .ec.cap{ border-color:rgba(245,225,0,.5); color:var(--yellow); opacity:1; background:rgba(245,225,0,.05); }
 .fw-eras .eras-foot{ margin-top:clamp(.5rem,1.2vw,.85rem); text-align:center; opacity:.5; font-size:clamp(.5rem,.85vw,.66rem); max-width:64ch; }
 
-
 .frag{ display:none; }
 .slide.active .frag.shown{ display:flex; flex-direction:column; align-items:center; width:100%; margin-top:clamp(.5rem,1.4vw,1rem); animation:rise .5s ease forwards; }
 .fw-exec.fw-eras, .fw-exec.fw-journey{ justify-content:center; }
@@ -214,6 +213,11 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 .fw-exec .frag .eras-foot, .fw-exec .frag .j-caption, .fw-exec .frag .j-sub{ margin-top:.4rem; }
 
 .hint{ position:absolute; right:clamp(.9rem,2.6vw,1.8rem); bottom:clamp(1.7rem,3.4vw,2.6rem); font-size:clamp(.5rem,.72vw,.62rem); font-weight:700; letter-spacing:.06em; text-transform:uppercase; opacity:.4; }
+
+.fw-fontes.fw-coleta .groups{ flex-direction:row; justify-content:center; gap:clamp(.7rem,2.4vw,1.8rem); max-width:44rem; }
+.fw-fontes.fw-coleta .group{ gap:.12rem; }
+.fw-coleta .tcol .reads{ font-size:clamp(.34rem,.54vw,.44rem); opacity:.42; font-style:italic; margin-bottom:.12rem; text-align:center; }
+
 @media (max-height:640px){ h1.title{ margin-bottom:.45rem; } .badge{ margin-bottom:.3rem; } }
 </style>
 </head>
@@ -223,7 +227,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 <section class="slide fw-cover active">
   <div class="accent" style="background:var(--yellow);"></div>
   <div class="wordmark reveal d2"><span class="wm-a">ai.dare</span><span class="wm-sep">/</span><span class="wm-b">motor</span><span class="wm-sep">/</span><span class="wm-v">v1</span></div>
-  <div class="index">01 / 18</div>
+  <div class="index">01 / 17</div>
 </section>
 
 <section class="slide fw-title">
@@ -232,7 +236,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <h2 class="reveal d2">O Motor</h2>
   <p class="ctx reveal d2">Cultura e comportamento de consumo lidos em ciclos permanentes, para transformar o que os dados mostram em ações efetivas e criativas.</p>
   <div class="stamp reveal d3"><span>iFood</span><span>Eletrolux</span><span>RD</span><span>MRV</span></div>
-  <div class="index">02 / 18</div>
+  <div class="index">02 / 17</div>
 </section>
 
 <section class="slide fw-exec what">
@@ -244,7 +248,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <p>Uma plataforma que lê cultura e comportamento de consumo em ciclo permanente e transforma o que se move no território em oportunidade de marca pronta para acionar.</p>
     <p>Mais do que velocidade, entrega criatividade sustentada por evidência: identifica o que está acontecendo e aponta o ângulo e o momento de agir.</p>
   </div>
-  <div class="index">03 / 18</div>
+  <div class="index">03 / 17</div>
 </section>
 
 <section class="slide fw-exec how fw-eras">
@@ -271,7 +275,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <div class="eras-foot">A fração de atenção é a tela onde o nativo digital vive. Cada linha desemboca em um sinal que o motor capta.</div>
   </div>
   <div class="hint" data-hint>toque para revelar &rarr;</div>
-  <div class="index">04 / 18</div>
+  <div class="index">04 / 17</div>
 </section>
 
 <section class="slide fw-exec why fw-journey">
@@ -289,7 +293,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <div class="j-sub">Os mesmos canais voltam em momentos diferentes, e cada pico é uma fração de atenção e um dado gerado.</div>
   </div>
   <div class="hint" data-hint>toque para revelar &rarr;</div>
-  <div class="index">05 / 18</div>
+  <div class="index">05 / 17</div>
 </section>
 
 <!-- AGENDA (executiva) -->
@@ -304,7 +308,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="arow"><span class="anum">04</span><span class="alabel">Ferramentas e cadência de output</span></div>
     <div class="arow"><span class="anum">05</span><span class="alabel">Da arquitetura ao caso de uso</span></div>
   </div>
-  <div class="index">06 / 18</div>
+  <div class="index">06 / 17</div>
 </section>
 
 <section class="slide fw-ciclo">
@@ -320,7 +324,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="node state5" style="left:16%; top:32%;"><span class="num">05</span><span class="chip">Resultado medido</span></div>
   </div>
   <div class="loop-note reveal d3">Resultado medido <span class="arrow">↻</span> volta como sinal bruto</div>
-  <div class="index">07 / 18</div>
+  <div class="index">07 / 17</div>
 </section>
 
 <section class="slide fw-hier">
@@ -348,64 +352,48 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="layer-label">Ação — lista aberta</div>
     <div class="row">
       <div class="node acao">Comunicação</div><div class="node acao">Conteúdo</div><div class="node acao">Interação</div>
-      <div class="node acao">Produto</div><div class="node acao">Mídia</div><div class="node acao">Stunt PR</div><div class="node acao plus">+</div>
+      <div class="node acao">Produto</div><div class="node acao">Mídia</div><div class="node acao">Stunt PR</div><div class="node acao">GEO / SEO</div><div class="node acao plus">+</div>
     </div>
     <div class="footnote">Interação = marca, engajamento, lead, venda — tipos de resultado, não um estágio fixo</div>
     <div class="loop">Resultado medido <span class="arrow-h">↻</span> reabre a captura no escopo</div>
   </div>
-  <div class="index">08 / 18</div>
+  <div class="index">08 / 17</div>
 </section>
 
-<section class="slide fw-fontes">
+<section class="slide fw-fontes fw-coleta">
   <div class="accent" style="background:linear-gradient(90deg,var(--pink),var(--yellow),var(--coral));"></div>
   <div class="badge reveal d1">v1 — versão de trabalho</div>
-  <p class="transition reveal d1">A hierarquia aponta a captura como o gatilho do insight validado. As seis fontes abaixo são o que alimenta essa captura.</p>
-  <h1 class="title reveal d2">Fontes de dado, por disciplina</h1>
+  <p class="transition reveal d1">A captura é alimentada por disciplina. Dentro de cada uma, as ferramentas coletam algo específico que o motor processa.</p>
+  <h1 class="title reveal d2">Fontes por disciplina, e o que cada uma coleta</h1>
   <div class="mini-venn reveal d3"><div class="mv-circle"></div><div class="mv-circle right"></div></div>
   <div class="mini-venn-cap reveal d3">Cultura · Jornada</div>
-  <div class="groups reveal d3">
-    <div class="group social"><div class="group-label">Social</div><div class="reads">lê: percepção e criador</div>
-      <div class="group-row"><span class="chip">Social listening</span><span class="chip">Social intelligence</span><span class="chip">Meta Ads Library</span></div>
-    </div>
-    <div class="group search"><div class="group-label">Search</div><div class="reads">lê: intenção de busca</div>
-      <div class="group-row"><span class="chip">Semrush + Gemini</span><span class="chip">Google Trends</span></div>
-    </div>
-    <div class="group web"><div class="group-label">Web &amp; AI</div><div class="reads">lê: notícia, review e resposta de IA</div>
-      <div class="group-row"><span class="chip">Webscraping multi-IA</span></div>
-    </div>
-  </div>
-  <div class="index">09 / 18</div>
-</section>
-
-<section class="slide fw-coleta">
-  <div class="accent" style="background:linear-gradient(90deg,var(--pink),var(--yellow),var(--coral));"></div>
-  <div class="badge reveal d1">v1 — versão de trabalho</div>
-  <p class="transition reveal d1">Fontes indicam a disciplina. Cada ferramenta, dentro dela, coleta algo específico, e é isso que o motor processa.</p>
-  <h1 class="title reveal d2">Cada ferramenta coleta, o motor processa</h1>
-  <div class="tool-groups reveal d3">
+  <div class="frag">
+    <div class="tool-groups">
     <div class="tcol social">
-      <div class="tcol-label">Social</div>
+      <div class="tcol-label">Social</div><div class="reads">lê: percepção e criador</div>
       <div class="titem"><span class="tcollect">Menções e sentimentos</span><span class="tname">Social listening</span></div>
       <div class="titem"><span class="tcollect">Creators em tendência</span><span class="tname">Social intelligence</span></div>
       <div class="titem"><span class="tcollect">Criativos de referência</span><span class="tname">Meta Ads Library</span></div>
     </div>
     <div class="tcol search">
-      <div class="tcol-label">Search</div>
+      <div class="tcol-label">Search</div><div class="reads">lê: intenção de busca</div>
       <div class="titem"><span class="tcollect">Termos e volumetrias</span><span class="tname">Semrush + Gemini</span></div>
       <div class="titem"><span class="tcollect">Picos e vales de busca</span><span class="tname">Google Trends</span></div>
     </div>
     <div class="tcol web">
-      <div class="tcol-label">Web &amp; AI</div>
+      <div class="tcol-label">Web &amp; AI</div><div class="reads">lê: notícia, review e resposta de IA</div>
       <div class="titem"><span class="tcollect">Notícias e conteúdos</span><span class="tname">Webscraping multi-IA</span></div>
       <div class="titem"><span class="tcollect">Reviews e avaliações</span><span class="tname">Webscraping multi-IA</span></div>
       <div class="titem"><span class="tcollect">Respostas de prompts</span><span class="tname">Motores de IA</span></div>
     </div>
   </div>
-  <div class="process-echo reveal d3">
+    <div class="process-echo">
     <div class="pe-label">Motor processa</div>
     <div class="pe-row"><span class="pe-chip">Magnitude</span><span class="pe-arrow">→</span><span class="pe-chip">Confirmação</span><span class="pe-arrow">→</span><span class="pe-chip pe-out">Validado</span></div>
   </div>
-  <div class="index">10 / 18</div>
+  </div>
+  <div class="hint" data-hint>toque para abrir as ferramentas &rarr;</div>
+  <div class="index">09 / 17</div>
 </section>
 
 <section class="slide fw-crit">
@@ -425,7 +413,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="stage s3">Ação disponível</div>
     <div class="next">→ ação recomendada</div>
   </div>
-  <div class="index">11 / 18</div>
+  <div class="index">10 / 17</div>
 </section>
 
 <section class="slide fw-opp">
@@ -451,7 +439,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       </ul>
     </div>
   </div>
-  <div class="index">12 / 18</div>
+  <div class="index">11 / 17</div>
 </section>
 
 <section class="slide fw-opp">
@@ -477,7 +465,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       </ul>
     </div>
   </div>
-  <div class="index">13 / 18</div>
+  <div class="index">12 / 17</div>
 </section>
 
 <section class="slide fw-opp">
@@ -503,7 +491,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       </ul>
     </div>
   </div>
-  <div class="index">14 / 18</div>
+  <div class="index">13 / 17</div>
 </section>
 
 <section class="slide fw-opp">
@@ -530,7 +518,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     </div>
   </div>
   <div class="deliver-arrow reveal d3">→ Ação</div>
-  <div class="index">15 / 18</div>
+  <div class="index">14 / 17</div>
 </section>
 
 <section class="slide fw-fontes">
@@ -557,7 +545,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     </div>
   </div>
   <div class="foot reveal d3">* pendência de etapa 3</div>
-  <div class="index">16 / 18</div>
+  <div class="index">15 / 17</div>
 </section>
 
 <section class="slide fw-cad">
@@ -570,7 +558,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="col semanal"><h3>Semanal</h3><span class="tag">Brief + retorno</span></div>
     <div class="col mensal"><h3>Mensal</h3><span class="tag">Executivo + retorno</span></div>
   </div>
-  <div class="index">17 / 18</div>
+  <div class="index">16 / 17</div>
 </section>
 
 <section class="slide fw-hook">
@@ -580,7 +568,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <p class="lead reveal d3">O caso de uso começa retomando o que já está aqui: quais fontes, quais formatos de output e quais ações cada framework já aponta.</p>
   <div class="stack reveal d3"><span>Fontes</span><span>Formatos</span><span>Ações</span></div>
   <div class="status reveal d3">Etapa 2 — arquitetura fechada · Etapa 3 — caso de uso, a seguir</div>
-  <div class="index">18 / 18</div>
+  <div class="index">17 / 17</div>
 </section>
 
 </div>
