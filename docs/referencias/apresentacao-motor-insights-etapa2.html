@@ -212,7 +212,6 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 .fw-exec.fw-eras, .fw-exec.fw-journey{ justify-content:center; }
 .fw-exec.fw-eras .paras, .fw-exec.fw-journey .paras{ max-width:52rem; }
 .fw-exec .frag .eras-foot, .fw-exec .frag .j-caption, .fw-exec .frag .j-sub{ margin-top:.4rem; }
-.hint{ position:absolute; right:clamp(.9rem,2.6vw,1.8rem); bottom:clamp(1.7rem,3.4vw,2.6rem); font-size:clamp(.5rem,.72vw,.62rem); font-weight:700; letter-spacing:.06em; text-transform:uppercase; opacity:.4; }
 
 @media (max-height:640px){ h1.title{ margin-bottom:.45rem; } .badge{ margin-bottom:.3rem; } }
 </style>
@@ -254,7 +253,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <h2 class="reveal d2">Orientado por IA, alimentado por sinais descentralizados</h2>
   <div class="paras reveal d3">
     <p>No lugar de ferramentas soltas, a IA orquestra sinais descentralizados de cultura e consumo e separa o ruído do que merece resposta.</p>
-    <p>Cada leitura validada vira ação 360, endereçada a cada frente da operação, da criação e da mídia ao produto e ao atendimento.</p>
+    <p>Cada sinal passa por um processo de validação e, validado, é endereçado à criação de ações 360 nas frentes de mídia, conteúdo, produto e atendimento.</p>
   </div>
   <div class="frag">
     <div class="eras-grid">
@@ -270,7 +269,6 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   </div>
   <div class="eras-foot">A fração de atenção é a tela onde o nativo digital vive. Cada linha desemboca em um sinal que o motor capta.</div>
   </div>
-    <div class="hint" data-hint>toque para revelar &rarr;</div>
   <div class="index">04 / 18</div>
 </section>
 
@@ -288,7 +286,6 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <div class="j-caption">Cada player isolado enxerga um pico. O ecossistema enxerga a curva inteira.</div>
   <div class="j-sub">Os mesmos canais voltam em momentos diferentes, e cada pico é uma fração de atenção e um dado gerado.</div>
   </div>
-    <div class="hint" data-hint>toque para revelar &rarr;</div>
   <div class="index">05 / 18</div>
 </section>
 
@@ -592,38 +589,30 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 <script>
 const slides = [...document.querySelectorAll('.slide')];
 const dotsWrap = document.getElementById('navdots');
-let current = 0;
-const fragState = slides.map(()=>0);
+let current = 0, fragTimers = [];
+const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 const fragsOf = i => slides[i].querySelectorAll('.frag');
-slides.forEach((_, i) => { const b = document.createElement('button'); b.addEventListener('click', e=>{e.stopPropagation(); goTo(i,'all');}); dotsWrap.appendChild(b); });
+slides.forEach((_, i) => { const b = document.createElement('button'); b.addEventListener('click', e=>{e.stopPropagation(); goTo(i);}); dotsWrap.appendChild(b); });
 const dots = dotsWrap.querySelectorAll('button');
-function applyFrags(i){
-  const f = fragsOf(i);
-  f.forEach((el,k)=> el.classList.toggle('shown', k < fragState[i]));
-  const hint = slides[i].querySelector('[data-hint]');
-  if(hint) hint.style.display = (fragState[i] < f.length) ? 'block' : 'none';
+function clearTimers(){ fragTimers.forEach(t=>clearTimeout(t)); fragTimers = []; }
+function showFrags(i){
+  fragsOf(i).forEach((el,k)=>{
+    if(reduce){ el.classList.add('shown'); return; }
+    fragTimers.push(setTimeout(()=>el.classList.add('shown'), 950 + k*280));
+  });
 }
 function render(){
-  slides.forEach((s,idx)=>s.classList.toggle('active', idx===current));
+  clearTimers();
+  slides.forEach((s,idx)=>{
+    const on = idx===current;
+    s.classList.toggle('active', on);
+    if(!on) s.querySelectorAll('.frag').forEach(el=>el.classList.remove('shown'));
+  });
   dots.forEach((d,idx)=>d.classList.toggle('active', idx===current));
-  applyFrags(current);
+  showFrags(current);
 }
-function goTo(i, mode){
-  i = Math.max(0, Math.min(slides.length-1, i));
-  current = i;
-  if(mode==='all') fragState[i] = fragsOf(i).length;
-  else if(mode==='reset') fragState[i] = 0;
-  render();
-}
-function go(delta){
-  if(delta>0){
-    if(fragState[current] < fragsOf(current).length){ fragState[current]++; applyFrags(current); return; }
-    if(current < slides.length-1) goTo(current+1,'reset');
-  } else {
-    if(fragState[current] > 0){ fragState[current]--; applyFrags(current); return; }
-    if(current > 0) goTo(current-1,'all');
-  }
-}
+function goTo(i){ current = Math.max(0, Math.min(slides.length-1, i)); render(); }
+function go(delta){ goTo(current+delta); }
 document.addEventListener('keydown', e=>{
   if(['ArrowRight','ArrowDown',' '].includes(e.key)){ e.preventDefault(); go(1); }
   if(['ArrowLeft','ArrowUp'].includes(e.key)){ e.preventDefault(); go(-1); }
