@@ -191,7 +191,6 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 .fw-exec .paras{ display:flex; flex-direction:column; gap:clamp(.5rem,1.3vw,.82rem); max-width:46rem; }
 .fw-exec .paras p{ font-size:clamp(.66rem,1.15vw,.92rem); line-height:1.5; text-align:center; opacity:.84; }
 
-
 .fw-journey .journey-wrap{ width:100%; max-width:66rem; overflow-x:auto; }
 .fw-journey svg{ width:100%; min-width:540px; height:auto; display:block; }
 .fw-journey .j-caption{ margin-top:clamp(.5rem,1.3vw,.9rem); text-align:center; font-weight:800; color:var(--coral); font-size:clamp(.6rem,1.05vw,.84rem); max-width:56ch; }
@@ -207,6 +206,14 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 .fw-eras .ec.cap{ border-color:rgba(245,225,0,.5); color:var(--yellow); opacity:1; background:rgba(245,225,0,.05); }
 .fw-eras .eras-foot{ margin-top:clamp(.5rem,1.2vw,.85rem); text-align:center; opacity:.5; font-size:clamp(.5rem,.85vw,.66rem); max-width:64ch; }
 
+
+.frag{ display:none; }
+.slide.active .frag.shown{ display:flex; flex-direction:column; align-items:center; width:100%; margin-top:clamp(.5rem,1.4vw,1rem); animation:rise .5s ease forwards; }
+.fw-exec.fw-eras, .fw-exec.fw-journey{ justify-content:center; }
+.fw-exec.fw-eras .paras, .fw-exec.fw-journey .paras{ max-width:52rem; }
+.fw-exec .frag .eras-foot, .fw-exec .frag .j-caption, .fw-exec .frag .j-sub{ margin-top:.4rem; }
+.hint{ position:absolute; right:clamp(.9rem,2.6vw,1.8rem); bottom:clamp(1.7rem,3.4vw,2.6rem); font-size:clamp(.5rem,.72vw,.62rem); font-weight:700; letter-spacing:.06em; text-transform:uppercase; opacity:.4; }
+
 @media (max-height:640px){ h1.title{ margin-bottom:.45rem; } .badge{ margin-bottom:.3rem; } }
 </style>
 </head>
@@ -216,7 +223,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 <section class="slide fw-cover active">
   <div class="accent" style="background:var(--yellow);"></div>
   <div class="wordmark reveal d2"><span class="wm-a">ai.dare</span><span class="wm-sep">/</span><span class="wm-b">motor</span><span class="wm-sep">/</span><span class="wm-v">v1</span></div>
-  <div class="index">01 / 20</div>
+  <div class="index">01 / 18</div>
 </section>
 
 <section class="slide fw-title">
@@ -225,7 +232,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <h2 class="reveal d2">O Motor</h2>
   <p class="ctx reveal d2">Cultura e comportamento de consumo lidos em ciclos permanentes, para transformar o que os dados mostram em ações efetivas e criativas.</p>
   <div class="stamp reveal d3"><span>iFood</span><span>Eletrolux</span><span>RD</span><span>MRV</span></div>
-  <div class="index">02 / 20</div>
+  <div class="index">02 / 18</div>
 </section>
 
 <section class="slide fw-exec what">
@@ -237,10 +244,10 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <p>Uma plataforma que lê cultura e comportamento de consumo em ciclo permanente e transforma o que se move no território em oportunidade de marca pronta para acionar.</p>
     <p>Mais do que velocidade, entrega criatividade sustentada por evidência: identifica o que está acontecendo e aponta o ângulo e o momento de agir.</p>
   </div>
-  <div class="index">03 / 20</div>
+  <div class="index">03 / 18</div>
 </section>
 
-<section class="slide fw-exec how">
+<section class="slide fw-exec how fw-eras">
   <div class="accent" style="background:var(--coral);"></div>
   <div class="badge reveal d1">v1 — versão de trabalho</div>
   <p class="kicker reveal d1">Como</p>
@@ -249,14 +256,8 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <p>No lugar de ferramentas soltas, a IA orquestra sinais descentralizados de cultura e consumo e separa o ruído do que merece resposta.</p>
     <p>Cada leitura validada vira ação 360, endereçada a cada frente da operação, da criação e da mídia ao produto e ao atendimento.</p>
   </div>
-  <div class="index">04 / 20</div>
-</section>
-
-<section class="slide fw-eras">
-  <div class="accent" style="background:linear-gradient(90deg,var(--coral),var(--yellow));"></div>
-  <div class="badge reveal d1">v1 — versão de trabalho</div>
-  <h1 class="title reveal d2">Da obra ao feed, à fração de atenção</h1>
-  <div class="eras-grid reveal d3">
+  <div class="frag">
+    <div class="eras-grid">
     <div class="eh"></div><div class="eh">Cultura lenta</div><div class="eh">Cultura rápida</div><div class="eh hot">Fração de atenção</div><div class="eh cap">Onde o motor capta</div>
     <div class="er">Editorial</div><div class="ec">jornal impresso</div><div class="ec">portal multimídia</div><div class="ec hot">feed e clickbait</div><div class="ec cap">verticais + SEO e GEO</div>
     <div class="er">Vídeo</div><div class="ec">cinema e TV</div><div class="ec">vídeo online</div><div class="ec hot">cortes e shorts</div><div class="ec cap">fábrica de cortes</div>
@@ -267,11 +268,13 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="er">Relacionamento</div><div class="ec">carta e call center</div><div class="ec">e-mail e CRM</div><div class="ec hot">mensagens e contexto</div><div class="ec cap">CRM e réguas</div>
     <div class="er">Busca e decisão</div><div class="ec">enciclopédia</div><div class="ec">busca de links</div><div class="ec hot">resposta de IA</div><div class="ec cap">GEO: share of answer</div>
   </div>
-  <div class="eras-foot reveal d3">A fração de atenção é a tela onde o nativo digital vive. Cada linha desemboca em um sinal que o motor capta.</div>
-  <div class="index">05 / 20</div>
+  <div class="eras-foot">A fração de atenção é a tela onde o nativo digital vive. Cada linha desemboca em um sinal que o motor capta.</div>
+  </div>
+    <div class="hint" data-hint>toque para revelar &rarr;</div>
+  <div class="index">04 / 18</div>
 </section>
 
-<section class="slide fw-exec why">
+<section class="slide fw-exec why fw-journey">
   <div class="accent" style="background:var(--pink);"></div>
   <div class="badge reveal d1">v1 — versão de trabalho</div>
   <p class="kicker reveal d1">Por quê</p>
@@ -280,17 +283,13 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <p>A jornada não é mais um funil previsível. Descoberta, consideração e compra se espalham por canais dispersos, dentro e fora da marca, e boa parte acontece onde a pesquisa tradicional não chega.</p>
     <p>Produto e conteúdo hoje são descobertos de forma descentralizada. Ler esse movimento em tempo real permite à marca responder na janela certa e ocupar a conversa antes do concorrente.</p>
   </div>
-  <div class="index">06 / 20</div>
-</section>
-
-<section class="slide fw-journey">
-  <div class="accent" style="background:var(--pink);"></div>
-  <div class="badge reveal d1">v1 — versão de trabalho</div>
-  <h1 class="title reveal d2">A nova jornada, uma curva de atenção</h1>
-  <div class="journey-wrap reveal d3"><svg viewBox="0 0 1240 380" role="img" aria-label="Curva de atenção da nova jornada"><rect x="478" y="96" width="479" height="220" rx="16" fill="rgba(232,20,79,0.07)" stroke="rgba(232,20,79,0.35)" stroke-width="1"/><text x="717.5" y="86" text-anchor="middle" fill="#E8144F" font-size="15" font-weight="800" letter-spacing="1.5">EXPLORA E AVALIA, EM LOOP</text><line x1="60" y1="322" x2="1180" y2="322" stroke="rgba(250,246,236,0.18)" stroke-width="1"/><text x="612" y="350" text-anchor="middle" fill="#FAF6EC" opacity="0.42" font-size="13" font-weight="600">tempo · da descoberta à recompra, em intervalos irregulares →</text><text x="34" y="210" fill="#FAF6EC" opacity="0.42" font-size="13" font-weight="600" transform="rotate(-90 34 210)">atenção e intenção →</text><path d="M 70.0,300.0 C 76.7,300.0 96.7,325.0 110.0,300.0 C 123.3,275.0 132.5,150.0 150.0,150.0 C 167.5,150.0 193.3,289.7 215.0,300.0 C 236.7,310.3 258.8,212.0 280.0,212.0 C 301.2,212.0 321.7,306.0 342.5,300.0 C 363.3,294.0 384.2,176.0 405.0,176.0 C 425.8,176.0 446.7,307.7 467.5,300.0 C 488.3,292.3 509.2,130.0 530.0,130.0 C 550.8,130.0 571.7,294.7 592.5,300.0 C 613.3,305.3 634.2,162.0 655.0,162.0 C 675.8,162.0 696.7,295.0 717.5,300.0 C 738.3,305.0 759.2,192.0 780.0,192.0 C 800.8,192.0 821.7,294.3 842.5,300.0 C 863.3,305.7 884.2,226.0 905.0,226.0 C 925.8,226.0 946.7,317.7 967.5,300.0 C 988.3,282.3 1008.8,120.0 1030.0,120.0 C 1051.2,120.0 1073.3,286.3 1095.0,300.0 C 1116.7,313.7 1142.5,202.0 1160.0,202.0 C 1177.5,202.0 1191.7,284.7 1200.0,300.0 C 1208.3,315.3 1208.3,295.0 1210.0,294.0 " fill="none" stroke="#F5E100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M1198,300 l24,6 l-16,10" fill="none" stroke="#F5E100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="120" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Feed social</text><text x="150" y="134" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">o corte do creator</text><circle cx="150" cy="150" r="14" fill="#FAF6EC"/><text x="150" y="155" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">1</text><text x="280" y="242" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Áudio</text><text x="280" y="256" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">no trajeto</text><circle cx="280" cy="212" r="14" fill="#FAF6EC"/><text x="280" y="217" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">2</text><text x="405" y="146" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Feed, de novo</text><text x="405" y="160" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">salva o perfil</text><circle cx="405" cy="176" r="14" fill="#FAF6EC"/><text x="405" y="181" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">3</text><text x="530" y="160" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Resposta de IA</text><text x="530" y="174" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">“qual o melhor modelo?”</text><circle cx="530" cy="130" r="14" fill="#E8144F"/><text x="530" y="135" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">4</text><text x="655" y="132" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Editorial e hub</text><text x="655" y="146" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">o comparativo</text><circle cx="655" cy="162" r="14" fill="#FAF6EC"/><text x="655" y="167" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">5</text><text x="780" y="222" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">IA, de novo</text><text x="780" y="236" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">confere a dúvida</text><circle cx="780" cy="192" r="14" fill="#E8144F"/><text x="780" y="197" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">6</text><text x="905" y="196" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">UGC e reviews</text><text x="905" y="210" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">nos comentários</text><circle cx="905" cy="226" r="14" fill="#FAF6EC"/><text x="905" y="231" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">7</text><text x="1030" y="150" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Liveshop</text><text x="1030" y="164" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">o pico: a compra</text><circle cx="1030" cy="120" r="14" fill="#FAF6EC"/><text x="1030" y="125" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">8</text><text x="1160" y="172" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">CRM e newsletter</text><text x="1160" y="186" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">a régua, a recompra</text><circle cx="1160" cy="202" r="14" fill="#FAF6EC"/><text x="1160" y="207" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">9</text></svg></div>
-  <div class="j-caption reveal d3">Cada player isolado enxerga um pico. O ecossistema enxerga a curva inteira.</div>
-  <div class="j-sub reveal d3">Os mesmos canais voltam em momentos diferentes, e cada pico é uma fração de atenção e um dado gerado.</div>
-  <div class="index">07 / 20</div>
+  <div class="frag">
+    <div class="journey-wrap"><svg viewBox="0 0 1240 380" role="img" aria-label="Curva de atenção da nova jornada"><rect x="478" y="96" width="479" height="220" rx="16" fill="rgba(232,20,79,0.07)" stroke="rgba(232,20,79,0.35)" stroke-width="1"/><text x="717.5" y="86" text-anchor="middle" fill="#E8144F" font-size="15" font-weight="800" letter-spacing="1.5">EXPLORA E AVALIA, EM LOOP</text><line x1="60" y1="322" x2="1180" y2="322" stroke="rgba(250,246,236,0.18)" stroke-width="1"/><text x="612" y="350" text-anchor="middle" fill="#FAF6EC" opacity="0.42" font-size="13" font-weight="600">tempo · da descoberta à recompra, em intervalos irregulares →</text><text x="34" y="210" fill="#FAF6EC" opacity="0.42" font-size="13" font-weight="600" transform="rotate(-90 34 210)">atenção e intenção →</text><path d="M 70.0,300.0 C 76.7,300.0 96.7,325.0 110.0,300.0 C 123.3,275.0 132.5,150.0 150.0,150.0 C 167.5,150.0 193.3,289.7 215.0,300.0 C 236.7,310.3 258.8,212.0 280.0,212.0 C 301.2,212.0 321.7,306.0 342.5,300.0 C 363.3,294.0 384.2,176.0 405.0,176.0 C 425.8,176.0 446.7,307.7 467.5,300.0 C 488.3,292.3 509.2,130.0 530.0,130.0 C 550.8,130.0 571.7,294.7 592.5,300.0 C 613.3,305.3 634.2,162.0 655.0,162.0 C 675.8,162.0 696.7,295.0 717.5,300.0 C 738.3,305.0 759.2,192.0 780.0,192.0 C 800.8,192.0 821.7,294.3 842.5,300.0 C 863.3,305.7 884.2,226.0 905.0,226.0 C 925.8,226.0 946.7,317.7 967.5,300.0 C 988.3,282.3 1008.8,120.0 1030.0,120.0 C 1051.2,120.0 1073.3,286.3 1095.0,300.0 C 1116.7,313.7 1142.5,202.0 1160.0,202.0 C 1177.5,202.0 1191.7,284.7 1200.0,300.0 C 1208.3,315.3 1208.3,295.0 1210.0,294.0 " fill="none" stroke="#F5E100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M1198,300 l24,6 l-16,10" fill="none" stroke="#F5E100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="120" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Feed social</text><text x="150" y="134" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">o corte do creator</text><circle cx="150" cy="150" r="14" fill="#FAF6EC"/><text x="150" y="155" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">1</text><text x="280" y="242" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Áudio</text><text x="280" y="256" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">no trajeto</text><circle cx="280" cy="212" r="14" fill="#FAF6EC"/><text x="280" y="217" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">2</text><text x="405" y="146" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Feed, de novo</text><text x="405" y="160" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">salva o perfil</text><circle cx="405" cy="176" r="14" fill="#FAF6EC"/><text x="405" y="181" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">3</text><text x="530" y="160" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Resposta de IA</text><text x="530" y="174" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">“qual o melhor modelo?”</text><circle cx="530" cy="130" r="14" fill="#E8144F"/><text x="530" y="135" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">4</text><text x="655" y="132" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Editorial e hub</text><text x="655" y="146" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">o comparativo</text><circle cx="655" cy="162" r="14" fill="#FAF6EC"/><text x="655" y="167" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">5</text><text x="780" y="222" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">IA, de novo</text><text x="780" y="236" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">confere a dúvida</text><circle cx="780" cy="192" r="14" fill="#E8144F"/><text x="780" y="197" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">6</text><text x="905" y="196" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">UGC e reviews</text><text x="905" y="210" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">nos comentários</text><circle cx="905" cy="226" r="14" fill="#FAF6EC"/><text x="905" y="231" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">7</text><text x="1030" y="150" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">Liveshop</text><text x="1030" y="164" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">o pico: a compra</text><circle cx="1030" cy="120" r="14" fill="#FAF6EC"/><text x="1030" y="125" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">8</text><text x="1160" y="172" text-anchor="middle" fill="#FAF6EC" font-size="16" font-weight="800">CRM e newsletter</text><text x="1160" y="186" text-anchor="middle" fill="#FAF6EC" opacity="0.5" font-size="12" font-weight="600">a régua, a recompra</text><circle cx="1160" cy="202" r="14" fill="#FAF6EC"/><text x="1160" y="207" text-anchor="middle" fill="#0d0d0d" font-size="15" font-weight="800">9</text></svg></div>
+  <div class="j-caption">Cada player isolado enxerga um pico. O ecossistema enxerga a curva inteira.</div>
+  <div class="j-sub">Os mesmos canais voltam em momentos diferentes, e cada pico é uma fração de atenção e um dado gerado.</div>
+  </div>
+    <div class="hint" data-hint>toque para revelar &rarr;</div>
+  <div class="index">05 / 18</div>
 </section>
 
 <!-- AGENDA (executiva) -->
@@ -305,7 +304,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="arow"><span class="anum">04</span><span class="alabel">Ferramentas e cadência de output</span></div>
     <div class="arow"><span class="anum">05</span><span class="alabel">Da arquitetura ao caso de uso</span></div>
   </div>
-  <div class="index">08 / 20</div>
+  <div class="index">06 / 18</div>
 </section>
 
 <section class="slide fw-ciclo">
@@ -321,7 +320,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="node state5" style="left:16%; top:32%;"><span class="num">05</span><span class="chip">Resultado medido</span></div>
   </div>
   <div class="loop-note reveal d3">Resultado medido <span class="arrow">↻</span> volta como sinal bruto</div>
-  <div class="index">09 / 20</div>
+  <div class="index">07 / 18</div>
 </section>
 
 <section class="slide fw-hier">
@@ -354,7 +353,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="footnote">Interação = marca, engajamento, lead, venda — tipos de resultado, não um estágio fixo</div>
     <div class="loop">Resultado medido <span class="arrow-h">↻</span> reabre a captura no escopo</div>
   </div>
-  <div class="index">10 / 20</div>
+  <div class="index">08 / 18</div>
 </section>
 
 <section class="slide fw-fontes">
@@ -375,7 +374,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       <div class="group-row"><span class="chip">Webscraping multi-IA</span></div>
     </div>
   </div>
-  <div class="index">11 / 20</div>
+  <div class="index">09 / 18</div>
 </section>
 
 <section class="slide fw-coleta">
@@ -406,7 +405,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="pe-label">Motor processa</div>
     <div class="pe-row"><span class="pe-chip">Magnitude</span><span class="pe-arrow">→</span><span class="pe-chip">Confirmação</span><span class="pe-arrow">→</span><span class="pe-chip pe-out">Validado</span></div>
   </div>
-  <div class="index">12 / 20</div>
+  <div class="index">10 / 18</div>
 </section>
 
 <section class="slide fw-crit">
@@ -426,7 +425,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="stage s3">Ação disponível</div>
     <div class="next">→ ação recomendada</div>
   </div>
-  <div class="index">13 / 20</div>
+  <div class="index">11 / 18</div>
 </section>
 
 <section class="slide fw-opp">
@@ -452,7 +451,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       </ul>
     </div>
   </div>
-  <div class="index">14 / 20</div>
+  <div class="index">12 / 18</div>
 </section>
 
 <section class="slide fw-opp">
@@ -478,7 +477,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       </ul>
     </div>
   </div>
-  <div class="index">15 / 20</div>
+  <div class="index">13 / 18</div>
 </section>
 
 <section class="slide fw-opp">
@@ -504,7 +503,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
       </ul>
     </div>
   </div>
-  <div class="index">16 / 20</div>
+  <div class="index">14 / 18</div>
 </section>
 
 <section class="slide fw-opp">
@@ -531,7 +530,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     </div>
   </div>
   <div class="deliver-arrow reveal d3">→ Ação</div>
-  <div class="index">17 / 20</div>
+  <div class="index">15 / 18</div>
 </section>
 
 <section class="slide fw-fontes">
@@ -558,7 +557,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     </div>
   </div>
   <div class="foot reveal d3">* pendência de etapa 3</div>
-  <div class="index">18 / 20</div>
+  <div class="index">16 / 18</div>
 </section>
 
 <section class="slide fw-cad">
@@ -571,7 +570,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
     <div class="col semanal"><h3>Semanal</h3><span class="tag">Brief + retorno</span></div>
     <div class="col mensal"><h3>Mensal</h3><span class="tag">Executivo + retorno</span></div>
   </div>
-  <div class="index">19 / 20</div>
+  <div class="index">17 / 18</div>
 </section>
 
 <section class="slide fw-hook">
@@ -581,7 +580,7 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
   <p class="lead reveal d3">O caso de uso começa retomando o que já está aqui: quais fontes, quais formatos de output e quais ações cada framework já aponta.</p>
   <div class="stack reveal d3"><span>Fontes</span><span>Formatos</span><span>Ações</span></div>
   <div class="status reveal d3">Etapa 2 — arquitetura fechada · Etapa 3 — caso de uso, a seguir</div>
-  <div class="index">20 / 20</div>
+  <div class="index">18 / 18</div>
 </section>
 
 </div>
@@ -591,14 +590,40 @@ h1.title{ font-weight:700; font-size:clamp(.8rem,1.5vw,1.1rem); opacity:.8; text
 <div class="navdots" id="navdots"></div>
 
 <script>
-const slides = document.querySelectorAll('.slide');
+const slides = [...document.querySelectorAll('.slide')];
 const dotsWrap = document.getElementById('navdots');
 let current = 0;
-slides.forEach((_, i) => { const b = document.createElement('button'); b.addEventListener('click', e=>{e.stopPropagation(); goTo(i);}); dotsWrap.appendChild(b); });
+const fragState = slides.map(()=>0);
+const fragsOf = i => slides[i].querySelectorAll('.frag');
+slides.forEach((_, i) => { const b = document.createElement('button'); b.addEventListener('click', e=>{e.stopPropagation(); goTo(i,'all');}); dotsWrap.appendChild(b); });
 const dots = dotsWrap.querySelectorAll('button');
-function render(){ slides.forEach((s,i)=>s.classList.toggle('active', i===current)); dots.forEach((d,i)=>d.classList.toggle('active', i===current)); }
-function goTo(i){ current = Math.max(0, Math.min(slides.length-1, i)); render(); }
-function go(delta){ goTo(current+delta); }
+function applyFrags(i){
+  const f = fragsOf(i);
+  f.forEach((el,k)=> el.classList.toggle('shown', k < fragState[i]));
+  const hint = slides[i].querySelector('[data-hint]');
+  if(hint) hint.style.display = (fragState[i] < f.length) ? 'block' : 'none';
+}
+function render(){
+  slides.forEach((s,idx)=>s.classList.toggle('active', idx===current));
+  dots.forEach((d,idx)=>d.classList.toggle('active', idx===current));
+  applyFrags(current);
+}
+function goTo(i, mode){
+  i = Math.max(0, Math.min(slides.length-1, i));
+  current = i;
+  if(mode==='all') fragState[i] = fragsOf(i).length;
+  else if(mode==='reset') fragState[i] = 0;
+  render();
+}
+function go(delta){
+  if(delta>0){
+    if(fragState[current] < fragsOf(current).length){ fragState[current]++; applyFrags(current); return; }
+    if(current < slides.length-1) goTo(current+1,'reset');
+  } else {
+    if(fragState[current] > 0){ fragState[current]--; applyFrags(current); return; }
+    if(current > 0) goTo(current-1,'all');
+  }
+}
 document.addEventListener('keydown', e=>{
   if(['ArrowRight','ArrowDown',' '].includes(e.key)){ e.preventDefault(); go(1); }
   if(['ArrowLeft','ArrowUp'].includes(e.key)){ e.preventDefault(); go(-1); }
