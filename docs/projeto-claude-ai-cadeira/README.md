@@ -1,6 +1,6 @@
 # Projeto espelho no Claude.ai: a cadeira em operação diária
 
-Materiais para montar o Projeto no Claude.ai que espelha a cadeira de Direção Executiva de Mídia e Dados. Versão: v2 (a v1 tratava o Projeto como camada de pensamento com produção visual em etapa separada; a v2 o torna autossuficiente, com a peça final como entrega default).
+Materiais para montar o Projeto no Claude.ai que espelha a cadeira de Direção Executiva de Mídia e Dados. Versão: v3 (a v1 tratava o Projeto como camada de pensamento; a v2 o tornou autossuficiente, com a peça final como entrega default; a v3 completa o pacote de conhecimento com método de prova, padrões de produção e glossário).
 
 ## Divisão de ambientes
 
@@ -20,12 +20,15 @@ Os dois compartilham a mesma essência: a identidade da cadeira, a tese (Ehrenbe
 | `instrucoes-do-projeto.md` | Colar integralmente no campo de instruções do Projeto |
 | `conhecimento/cadeira-dossie.md` | Anexar ao conhecimento do Projeto |
 | `conhecimento/guia-de-entregas.md` | Anexar ao conhecimento do Projeto |
+| `conhecimento/metodo-de-prova-e-testes.md` | Anexar ao conhecimento do Projeto |
+| `conhecimento/padroes-de-producao.md` | Anexar ao conhecimento do Projeto |
+| `conhecimento/glossario-economia-de-midia.md` | Anexar ao conhecimento do Projeto |
 
 ## Montagem, passo a passo
 
 1. No Claude.ai, criar um Projeto. Nome sugerido: "Direção de Mídia e Dados · operação diária".
 2. Colar o conteúdo de `instrucoes-do-projeto.md` no campo de instruções, sem edição.
-3. Anexar os dois arquivos de `conhecimento/` ao conhecimento do Projeto, com os nomes de arquivo preservados (as instruções os referenciam pelo nome).
+3. Anexar os cinco arquivos de `conhecimento/` ao conhecimento do Projeto, com os nomes de arquivo preservados (as instruções os referenciam pelo nome).
 4. No Projeto, conferir que artifacts, análise com código e criação de arquivos estão habilitados na conta, porque as entregas default dependem deles.
 5. Rodar os seis testes abaixo antes de usar em produção.
 
