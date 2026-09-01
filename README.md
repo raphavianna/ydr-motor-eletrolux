@@ -74,6 +74,7 @@ Cada etapa recebe seu próprio prompt técnico (via skill `agente-de-prompts`) e
 - [`docs/referencias/blueprint-motor-insights-etapa1-v2.md`](docs/referencias/blueprint-motor-insights-etapa1-v2.md) — blueprint da etapa 1 (v2)
 - [`docs/referencias/roteiro-deck-motor-insights-etapa2-v2.md`](docs/referencias/roteiro-deck-motor-insights-etapa2-v2.md) — roteiro estrutural do deck da etapa 2 (v2)
 - [`docs/referencias/apresentacao-motor-insights-etapa2.html`](docs/referencias/apresentacao-motor-insights-etapa2.html) — apresentação executiva da etapa 2
+- [`docs/projeto-claude-ai/`](docs/projeto-claude-ai/) — materiais do Projeto espelho no Claude.ai (operação diária da função; instruções + conhecimento)
 
 ## Pendências conhecidas (não bloqueiam a etapa 1)
 
