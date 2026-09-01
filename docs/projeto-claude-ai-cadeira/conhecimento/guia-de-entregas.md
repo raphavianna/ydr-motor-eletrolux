@@ -1,6 +1,6 @@
 # Guia de entregas: operação diária da cadeira
 
-Documento de conhecimento do Projeto de operação diária no Claude.ai. Versão: v2 (v1 tratava a peça visual como etapa separada; a v2 define a peça final como entrega default de cada tipo).
+Documento de conhecimento do Projeto de operação diária no Claude.ai. Versão: v1.
 
 Especificação e template de cada tipo de entrega do dia a dia da Direção Executiva de Mídia e Dados. O template é o formato de referência: os campos fixos permanecem em toda entrega do tipo; a profundidade de cada campo se adapta ao caso. Toda entrega segue o filtro editorial, as regras de dado e o padrão de insight das instruções do Projeto, abre com a célula da matriz (mandato × prática) quando for substantiva e nasce no formato final de uso declarado no tipo.
 
@@ -8,9 +8,9 @@ Especificação e template de cada tipo de entrega do dia a dia da Direção Exe
 
 ## 1. Plano de mídia
 
-Quando usar: desenhar ou revisar um plano em nível executivo (apenas a base versionada e o pipeline recorrente do plano pertencem ao Code).
+Quando usar: desenhar ou revisar um plano em nível executivo.
 
-Formato final: documento executivo mais planilha de verba (xlsx) quando houver números, com cenários modelados em abas, não descritos em texto. Quando o plano for defendido em reunião, a apresentação em HTML sai junto (tipo 4).
+Formato final: documento executivo mais planilha de verba (xlsx) quando houver números, com cenários modelados em abas. Quando o plano for defendido em reunião, a apresentação em HTML sai junto (tipo 4).
 
 Estrutura fixa:
 
@@ -27,9 +27,9 @@ Regra do tipo: verba sempre discutida em efeito marginal (D6). Sem dado de satur
 
 ## 2. Report e leitura de performance
 
-Quando usar: produzir report periódico, executivo ou de campanha a partir do dado fornecido (apenas o pipeline automatizado que alimenta report recorrente pertence ao Code).
+Quando usar: produzir report periódico, executivo ou de campanha a partir do dado fornecido.
 
-Formato final: documento executivo; quando o report for visual ou comparativo, dashboard em HTML com gráficos gerados por código a partir do dado fornecido, nunca gráfico descrito em texto.
+Formato final: documento executivo; quando o report for visual ou comparativo, dashboard em HTML com gráficos gerados por código a partir do dado fornecido.
 
 Estrutura fixa:
 
@@ -71,7 +71,7 @@ Pontos de apoio: [2 a 4 itens]
 Nota do apresentador: [contexto de fala, só quando houver]
 ```
 
-Regras do tipo: a narrativa segue o padrão de defesa da cadeira, tese antes de dado, dado antes de recomendação, recomendação com prova e custo de estar errado; separar decisão fechada de hipótese em teste no primeiro slide em que as duas convivem; lacunas e premissas ganham slide próprio perto do fim, porque lacuna declarada na defesa joga a favor; declarar teto de slides assumido quando o pedido não fixar um. Estrutura para aprovação antes da peça só quando o usuário pedir; o default é entregar a apresentação completa e iterar sobre ela.
+Regras do tipo: a narrativa segue o padrão de defesa da cadeira, tese antes de dado, dado antes de recomendação, recomendação com prova e custo de estar errado; separar decisão fechada de hipótese em teste no primeiro slide em que as duas convivem; lacunas e premissas ganham slide próprio perto do fim, porque lacuna declarada na defesa joga a favor; declarar teto de slides assumido quando o pedido não fixar um. O default é entregar a apresentação completa e iterar sobre ela; quando o usuário pedir a estrutura antes, entregue a estrutura e produza a peça na sequência aprovada.
 
 ## 5. Pauta de reunião
 
@@ -162,7 +162,7 @@ Regras do tipo: input separado de cálculo e de resultado; premissa marcada com 
 
 ## 12. Briefing de handoff para o Code
 
-Quando usar: apenas quando a execução exige repositório e recorrência (base versionada, ingestão automatizada de fontes, pipeline de dado em produção, agente de operação via API, engenharia de produto). Antes do handoff, produza aqui tudo o que o ambiente sustenta: a análise, o desenho, o modelo, o protótipo.
+Quando usar: a execução exige repositório e recorrência (base versionada, ingestão automatizada de fontes, pipeline de dado em produção, agente de operação via API, engenharia de produto). Produza aqui a análise, o desenho, o modelo e o protótipo, e encaminhe no briefing a parte que exige o repositório.
 
 Estrutura fixa:
 
@@ -182,7 +182,7 @@ Pendências: [o que segue em aberto e quem resolve]
 
 ## Regras transversais (valem para os 12 tipos)
 
-- Toda entrega nasce no formato final de uso do tipo: peça pronta, não estrutura para outra ferramenta terminar. Estrutura sozinha só quando o usuário pedir a estrutura.
+- Toda entrega nasce no formato final de uso do tipo, pronta para o destino (reunião, cliente, gestão do dia a dia). Quando o usuário pedir apenas a estrutura, entregue a estrutura.
 - Toda entrega nasce com título e versão; iteração gera v2 com registro do que mudou.
 - Entrega substantiva abre com a célula da matriz e a pergunta que responde, e fecha com "o que eu faria a seguir": uma a três ações em ordem de impacto.
 - Decisão fechada e hipótese em teste nunca aparecem misturadas sem marcação.

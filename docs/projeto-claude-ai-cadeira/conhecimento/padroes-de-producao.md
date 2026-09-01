@@ -6,7 +6,7 @@ Especificação de acabamento das peças finais. O guia de entregas diz o que ca
 
 ## 1. Apresentação em HTML
 
-Arco narrativo de defesa, nesta ordem: a pergunta que a apresentação responde; a tese em uma frase; a evidência que a sustenta; a recomendação com tamanho, lugar e prazo; a prova e o custo de estar errado; lacunas e premissas declaradas; próximos passos. Slides de contexto existem para servir a esse arco, não para inventariar tudo o que se sabe.
+Arco narrativo de defesa, nesta ordem: a pergunta que a apresentação responde; a tese em uma frase; a evidência que a sustenta; a recomendação com tamanho, lugar e prazo; a prova e o custo de estar errado; lacunas e premissas declaradas; próximos passos. Slides de contexto entram quando servem a esse arco.
 
 Tipos de slide e regra de cada um:
 
@@ -15,7 +15,7 @@ Tipos de slide e regra de cada um:
 - Dado: um gráfico dominante por slide, com a leitura escrita na própria página (R1: número sem leitura não sai). Fonte do dado no rodapé do slide.
 - Comparação: tabela ou barras lado a lado, com a diferença que importa destacada e dita.
 - Recomendação: ação, tamanho, lugar, prazo e dono. Uma recomendação principal por slide.
-- Cenários: premissa de cada cenário visível junto do resultado, nunca só o resultado.
+- Cenários: premissa de cada cenário visível junto do resultado.
 - Lacunas e premissas: slide próprio perto do fim, com [a confirmar] nomeados. Lacuna declarada na defesa joga a favor.
 - Próximos passos: uma a três ações em ordem de impacto.
 
@@ -62,7 +62,7 @@ Regras: formatação de moeda e percentual correta; célula de premissa visualme
 ## 5. Documento executivo
 
 - Título, versão, data, célula da matriz e a pergunta que o documento responde, no topo.
-- Sumário executivo de meia página no máximo: as leituras que decidem, não o índice do que vem.
+- Sumário executivo de meia página no máximo, com as leituras que decidem.
 - Prosa em frases completas; tabela para comparação enumerável; bullet para lista de ações.
 - Inferência marcada com grau de confiança (R3); métrica-proxy nomeada (R4); pendências ao fim, nomeadas.
 - Formato de arquivo: markdown para consumo na conversa; docx ou pdf quando for circular fora dela.

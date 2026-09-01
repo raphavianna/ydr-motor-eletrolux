@@ -1,10 +1,10 @@
 # Projeto espelho no Claude.ai: a cadeira em operação diária
 
-Materiais para montar o Projeto no Claude.ai que espelha a cadeira de Direção Executiva de Mídia e Dados. Versão: v3 (a v1 tratava o Projeto como camada de pensamento; a v2 o tornou autossuficiente, com a peça final como entrega default; a v3 completa o pacote de conhecimento com método de prova, padrões de produção e glossário).
+Materiais para montar o Projeto no Claude.ai que espelha a cadeira de Direção Executiva de Mídia e Dados. Versão: v1.
 
 ## Divisão de ambientes
 
-O Projeto é autossuficiente: produz a peça final com o potencial completo do ambiente Claude.ai (artifacts em HTML, execução de código, criação de arquivos xlsx, docx e pdf, busca na web quando disponível). A fronteira com o Code é estreita e definida pelo que exige repositório e execução recorrente, não pela complexidade da tarefa.
+O Projeto é autossuficiente: produz a peça final com o potencial completo do ambiente Claude.ai (artifacts em HTML, execução de código, criação de arquivos xlsx, docx e pdf, busca na web quando disponível). A fronteira com o Code é definida pelo que exige repositório e execução recorrente.
 
 | Ambiente | Papel |
 |---|---|
@@ -36,9 +36,9 @@ Os dois compartilham a mesma essência: a identidade da cadeira, a tese (Ehrenbe
 
 1. Matriz e padrão: colar um dado simples de campanha e pedir leitura. Esperado: abertura com a célula da matriz (mandato × prática), classificação da pergunta (diagnóstico, previsão ou decisão), insight em cinco partes e fechamento com "o que eu faria a seguir".
 2. Anti-alucinação: pedir um benchmark de CPM da categoria sem fornecer dado. Esperado: recusa a estimar por conhecimento geral, marcação [a confirmar] com onde buscar, e o resto da entrega estruturado normalmente.
-3. Produção completa de apresentação: pedir uma apresentação de defesa de plano com um dado simples fornecido. Esperado: peça pronta em HTML, com dado em gráfico, sem parar em roteiro nem perguntar se pode produzir a peça visual.
+3. Produção completa de apresentação: pedir uma apresentação de defesa de plano com um dado simples fornecido. Esperado: a peça pronta em HTML, com dado em gráfico, entregue em uma única passada.
 4. Produção completa de planilha: pedir um modelo de cenários de verba com margem fornecida. Esperado: arquivo xlsx com abas de premissas, cálculo e resultado, fórmulas vivas e premissas com fonte.
-5. Roteamento estreito: pedir "monta o pipeline de ingestão dos reports da Kantar". Esperado: o desenho do pipeline e o contrato de qualidade produzidos no Projeto, mais o briefing de handoff apenas para a implementação no repositório, sem empurrar a parte pensável para o Code.
+5. Fronteira com o Code: pedir "monta o pipeline de ingestão dos reports da Kantar". Esperado: o desenho do pipeline e o contrato de qualidade produzidos no Projeto, mais o briefing de handoff cobrindo a implementação no repositório.
 6. Doutrina sob pressão: apresentar um ROAS de plataforma alto e pedir mais verba no canal. Esperado: a escada da prova aplicada (atribuição não é incrementalidade), proposta de teste antes de escalar, no padrão do exemplo do dossiê.
 
 ## Manutenção
